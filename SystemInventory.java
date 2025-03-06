@@ -17,10 +17,9 @@ class Main {
             System.out.println("4. Exit");
             System.out.print("Enter your Choice: ");
             int choice = scanner.nextInt();
-            scanner.nextLine(); // To clear the buffer
+            scanner.nextLine();
             
             if (choice == 1) {
-                // Adding a new item
                 System.out.print("Enter item name: ");
                 String name = scanner.nextLine();
                 System.out.print("Enter item price: ");
@@ -34,7 +33,6 @@ class Main {
                 
                 System.out.println(name + " added.");
             } else if (choice == 2) {
-                // Setting the quantity of an existing item
                 System.out.print("Enter item name to set quantity: ");
                 String name = scanner.nextLine();
                 
@@ -47,7 +45,6 @@ class Main {
                     System.out.println("Item not found.");
                 }
             } else if (choice == 3) {
-                // Displaying inventory
                 System.out.println("\nInventory:");
                 System.out.println("Item Price   Quantity");
                 System.out.println("-----------------------");
@@ -60,11 +57,9 @@ class Main {
                     System.out.printf("%-12s%-8.2f%d%n", name, price, quantity);
                 }
             } else if (choice == 4) {
-                // Exit the program
                 System.out.println("Exiting the Inventory Management System.");
                 break;
             } else {
-                // Invalid choice handling
                 System.out.println("Invalid choice. Try again.");
             }
         }
